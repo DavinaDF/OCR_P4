@@ -1,0 +1,38 @@
+// Mes variables
+
+$primary-color: #9356DC;
+$secondary-color: #FF79DA;
+$tertiary-color: #99E2D0;
+
+// Mobile first
+
+body {
+    width: 500px;
+    background-color: $primary-color;
+}
+
+.header {
+
+    &__logo {
+        width: 197px;
+    }
+}
+
+// Tablette
+
+@media screen and (min-width:768px) {
+
+    body {
+        background-color: $secondary-color;
+    }
+}
+
+// Desktop 
+
+@media screen and (min-width:1024px) {
+
+    body {
+        width: 1000px;
+        background-color: $tertiary-color;
+    }
+}
