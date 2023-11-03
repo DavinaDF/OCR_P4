@@ -1,31 +1,345 @@
+@import url("https://cdn.jsdelivr.net/gh/jgthms/minireset.css@master/minireset.min.css");
+
 // Mes variables
 
 $primary-color: #9356DC;
 $secondary-color: #FF79DA;
 $tertiary-color: #99E2D0;
+$back-grey: #EAEAEA;
+$grey-light: #F6F6F6;
 
 // Mobile first
 
 body {
-    width: 500px;
-    background-color: $primary-color;
+    font-family: 'Roboto', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+h2 {
+    margin: 30px 0;
+    font-size: 24px;
+    font-weight: 900;
+}
+
+.gradient-btn {
+    padding: 20px;
+    background: #FF79DA;
+    background: -moz-linear-gradient(top, #FF79DA 0%, #9356DC 100%);
+    background: -webkit-linear-gradient(top, #FF79DA 0%, #9356DC 100%);
+    background: linear-gradient(to bottom, #FF79DA 0%, #9356DC 100%);
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 30px;
+    border: none;
+
+    &--cmd {
+        margin: 40px auto;
+        width: 186px;
+        display: block;
+    }
 }
 
 .header {
+    z-index: 100;
+    position: relative;
+    -webkit-box-shadow: 0px 2px 10px 0px rgba(0,0,0,0.2); 
+    box-shadow: 0px 2px 10px 0px rgba(0,0,0,0.2);
 
     &__logo {
         width: 197px;
+        padding: 15px 0;
+        display: block;
+        margin:0 auto;
+    }
+
+    &.header--restaurant {
+        display: flex;
+        align-items: center;
+
+        i {
+            margin-left: 20px;
+            font-size: 30px;
+        }
     }
 }
 
-// Tablette
+.LocationResearch {
 
-@media screen and (min-width:768px) {
+    z-index: 0;
+    position: relative;
+    padding: 10px;
+    height: 50px;
+    background-color: $back-grey;
+    text-align: center;
+    display: flex;
+    justify-content: center;
 
-    body {
-        background-color: $secondary-color;
+    &__input {
+        color: #000;
+        border-color: transparent;
+        background-color: transparent;
+        font-size: 16px;
+        font-weight: 500;
+        width: 120px;
+
+        &::placeholder {
+            color: #000;
+            border-color: transparent;
+            background-color: transparent;
+            font-size: 16px;
+            font-weight: 500;
+        }
+
+        &:focus {
+            outline: none;
+        }
+
+    }
+
+    
+}
+
+.informations {
+
+    padding: 30px 50px;
+    text-align: center;
+    background-color: $grey-light;
+
+    h1 {
+        font-size: 24px;
+        font-weight: 900;
+    }
+
+    p {
+        margin: 20px 50px;
+        font-size: 18px;
+        font-weight: 300;
+    }
+
+
+}
+
+.explication {
+
+    margin: 0 20px;
+    padding: 30px 0;
+
+    &__step {
+        margin: 0 0 20px 10px;
+        height: 80px;
+        background-color: $grey-light;
+        border-color: $grey-light;
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+        gap: 30px;
+        -webkit-box-shadow: 4px 4px 10px 6px rgba(206,206,206,0.5); 
+        box-shadow: 4px 4px 10px 6px rgba(206,206,206,0.5);
+
+        &__number {
+            margin-left: -10px;
+            color: white;
+            width: 24px;
+            height: 24px;
+            background-color: $primary-color;
+            border-radius: 20px;
+            text-align: center;
+            padding-top: 3px;
+        }
+
+        &__icone {
+            color: #7E7E7E;;
+        }
+
+        &__name {
+            font-size: 16px;
+            font-weight: 500;
+        }
+
+        .fa-store {
+            color: $primary-color;
+        }
     }
 }
+
+.ListRestaurant {
+
+    background-color: $grey-light;
+    padding: 20px;
+    
+    .card-restaurant{
+
+        background-color: #fff;
+        border-radius: 20px;
+        overflow: hidden;
+        position: relative;
+        margin-bottom: 20px;
+
+        &__picture {
+            height: 175px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        &__flag {
+            padding: 10px 15px;
+            background-color: $tertiary-color;
+            color: #008766;
+            border-radius: 5px;
+            font-size: 14px;
+            font-weight: 500;
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+
+        &__content {
+
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+
+            h3 {
+                color: #000;
+                font-size: 18px;
+                font-weight: 700;
+            }
+            p{
+                color: #000;
+                font-size: 17px;
+                font-weight: 300;
+            }
+            
+        }
+
+        &__icone {
+            color: #000;
+            font-size: 22px;
+        }
+    }
+}
+
+.footer {
+
+    padding: 20px;
+    background-color: #353535;
+    color: #fff;
+
+    &__logo {
+        width: 137px;
+        padding: 20px 0;
+        filter: invert(100%) sepia(100%) saturate(29%) hue-rotate(70deg) brightness(107%) contrast(108%);
+    }
+
+    &__link {
+        display: flex;
+        margin-bottom: 10px;
+        font-size: 16px;
+        font-weight: 500;
+
+        i {
+            font-size: 12px;
+            margin-right: 10px;
+        }
+
+        .fa-handshake-angle {
+            font-size: 10px;
+        }
+    }
+
+}
+
+.img-restaurant {
+
+    height: 275px;
+    // display: flex;
+    // flex-direction: column;
+    // justify-content: center;
+
+}
+
+.menu {
+
+    z-index: 50;
+    position: relative;
+    margin-top: -50px;
+    padding: 20px;
+    background-color: $grey-light;
+    border-top-right-radius:30px ;
+    border-top-left-radius: 30px;
+
+    &__restaurant {
+        display: flex;
+        justify-content: space-between;
+        align-content: center;
+
+        h1 {
+            font-family: 'Shrikhand', sans-serif;
+            font-size: 28px;
+        }
+    
+        i {
+            font-size: 22px;
+        }
+    }
+
+    &__category {
+
+        margin-top: 40px;
+
+        h2 {
+            font-size: 16px;
+            font-weight: 300;
+        }
+
+        h2::after {
+            content: '';
+            border-bottom: 3px solid $tertiary-color;
+            width: 40px;
+            display: block;
+            margin-top: 5px;
+        }
+
+        &__card {
+
+            padding: 20px;
+            margin-top: 20px;
+            background-color: #fff;
+            border-radius: 15px;
+            -webkit-box-shadow: 4px 4px 20px 2px rgba(0,0,0,0.1); 
+            box-shadow: 4px 4px 20px 2px rgba(0,0,0,0.1);
+
+            h3 {
+                font-size: 18;
+                font-weight: 500;
+            }
+
+            p {
+                font-size: 15px;
+                font-weight: 300;
+            }
+
+            span {
+                font-size: 15;
+                font-weight: 700;
+            }
+
+            &__price {
+                margin-top: 10px;
+                display: flex;
+                justify-content: space-between;
+            }
+        }
+    }
+}
+
 
 // Desktop 
 
