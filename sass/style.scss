@@ -7,11 +7,13 @@ $secondary-color: #FF79DA;
 $tertiary-color: #99E2D0;
 $back-grey: #EAEAEA;
 $grey-light: #F6F6F6;
+$gradient-background: linear-gradient(to bottom, #FF79DA 0%, #9356DC 100%);
 
 // Mobile first
 
 body {
     font-family: 'Roboto', sans-serif;
+    scroll-behavior: smooth;
 }
 
 a {
@@ -36,12 +38,19 @@ h2 {
     font-weight: 500;
     border-radius: 30px;
     border: none;
+    -webkit-box-shadow: 0px 4px 15px 0px rgba(0,0,0,0.35); 
+    box-shadow: 0px 4px 15px 0px rgba(0,0,0,0.35);
 
     &--cmd {
         margin: 40px auto;
         width: 186px;
         display: block;
     }
+}
+
+.gradient-btn:hover {
+    cursor: pointer;
+    opacity: 0.85;
 }
 
 .header {
@@ -106,9 +115,12 @@ h2 {
 
 .informations {
 
-    padding: 30px 50px;
-    text-align: center;
+    padding: 30px 80px;
     background-color: $grey-light;
+    display: flex;
+    flex-direction: column;
+    align-items:center ;
+    gap: 20px;
 
     h1 {
         font-size: 24px;
@@ -116,9 +128,9 @@ h2 {
     }
 
     p {
-        margin: 20px 50px;
         font-size: 18px;
         font-weight: 300;
+        text-align: center;
     }
 
 
@@ -138,8 +150,8 @@ h2 {
         display: flex;
         align-items: center;
         gap: 30px;
-        -webkit-box-shadow: 4px 4px 10px 6px rgba(206,206,206,0.5); 
-        box-shadow: 4px 4px 10px 6px rgba(206,206,206,0.5);
+        -webkit-box-shadow: 0px 4px 15px 0px rgba(0,0,0,0.15); 
+        box-shadow: 0px 4px 15px 0px rgba(0,0,0,0.15);
 
         &__number {
             margin-left: -10px;
@@ -220,8 +232,28 @@ h2 {
         }
 
         &__icone {
-            color: #000;
-            font-size: 22px;
+
+            position: relative;
+
+            i {
+                position: absolute;
+                right: 20px;
+                color: #000;
+                font-size: 22px;
+            }
+    
+            .fa-solid {
+                opacity: 0;
+        
+                &:hover {
+                    opacity: 1;
+                    color: transparent;
+                    background-clip: text;
+                    -webkit-background-clip: text;
+                    transition: all 0.4s ease-in-out;
+                    background-image: $gradient-background;
+                }
+            }
         }
     }
 }
@@ -288,6 +320,31 @@ h2 {
         i {
             font-size: 22px;
         }
+
+        &__icone {
+
+            position: relative;
+
+            i {
+                position: absolute;
+                right: 20px;
+                color: #000;
+                font-size: 22px;
+            }
+    
+            .fa-solid {
+                opacity: 0;
+        
+                &:hover {
+                    opacity: 1;
+                    color: transparent;
+                    background-clip: text;
+                    -webkit-background-clip: text;
+                    transition: all 0.4s ease-in-out;
+                    background-image: $gradient-background;
+                }
+            }
+        }
     }
 
     &__category {
@@ -313,8 +370,8 @@ h2 {
             margin-top: 20px;
             background-color: #fff;
             border-radius: 15px;
-            -webkit-box-shadow: 4px 4px 20px 2px rgba(0,0,0,0.1); 
-            box-shadow: 4px 4px 20px 2px rgba(0,0,0,0.1);
+            -webkit-box-shadow: 0px 4px 15px 0px rgba(0,0,0,0.1); 
+            box-shadow: 0px 4px 15px 0px rgba(0,0,0,0.1);
 
             h3 {
                 font-size: 18;
