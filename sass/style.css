@@ -300,9 +300,13 @@ h2 {
 }
 .footer__link {
   display: flex;
-  margin-bottom: 10px;
+  flex-direction: column;
   font-size: 16px;
   font-weight: 500;
+  gap: 10px;
+}
+.footer__link a {
+  color: #fff;
 }
 .footer__link i {
   font-size: 12px;
@@ -398,6 +402,56 @@ h2 {
 
 @media screen and (min-width: 1024px) {
   body {
-    width: 1000px;
+    margin: auto;
+  }
+  .header {
+    box-shadow: none;
+  }
+  .informations h1 {
+    font-size: 40px;
+    font-weight: 700;
+  }
+  .explication {
+    max-width: 1080px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+  }
+  .explication .stepArea {
+    display: flex;
+    gap: 30px;
+  }
+  .explication__step {
+    width: 30%;
+  }
+  .ListRestaurant__container {
+    max-width: 1080px;
+    margin: auto;
+  }
+  .ListRestaurant__container__cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .ListRestaurant .grid1, .ListRestaurant .grid3 {
+    margin-right: 50px;
+  }
+  .ListRestaurant .grid2, .ListRestaurant .grid4 {
+    margin-left: 50px;
+  }
+  .footer {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 50px;
+  }
+  .footer__logo {
+    margin-right: 40px;
+  }
+  .footer__link {
+    display: flex;
+    flex-direction: row;
+  }
+  .footer__link__2 {
+    margin-right: 40px;
   }
 }/*# sourceMappingURL=style.css.map */

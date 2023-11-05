@@ -391,10 +391,16 @@ h2 {
     }
 
     &__link {
+
         display: flex;
-        margin-bottom: 10px;
+        flex-direction: column;
         font-size: 16px;
         font-weight: 500;
+        gap: 10px;
+
+        a {
+            color: #fff;
+        }
 
         i {
             font-size: 12px;
@@ -464,9 +470,9 @@ h2 {
                     background-image: $gradient-background;
                 }
 
-                &:active {
+                // &:active {
 
-                }
+                // }
             }
         }
     }
@@ -527,6 +533,96 @@ h2 {
 @media screen and (min-width:1024px) {
 
     body {
-        width: 1000px;
+        margin: auto;
     }
+
+    .header {
+        box-shadow: none;
+    }
+
+    .informations {
+    
+        h1 {
+            font-size: 40px;
+            font-weight: 700;
+        }
+    }
+
+    .explication {
+        
+        max-width: 1080px;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+    
+        .stepArea {
+            display: flex;
+            gap: 30px;
+        }
+        
+        &__step {
+
+            width: 30%;
+        }
+    }
+
+    .ListRestaurant {
+
+        &__container {
+            max-width: 1080px;
+            margin: auto;
+
+            &__cards {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        .grid1, .grid3 {
+            margin-right: 50px;
+        }
+
+        .grid2, .grid4 {
+            margin-left: 50px;
+        }
+    }
+
+    .footer {
+
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        gap: 50px;
+
+        &__logo {
+            margin-right: 40px;
+        }
+
+        &__link {
+            display: flex;
+            flex-direction: row;
+
+            &__2 {
+                margin-right: 40px;
+            }
+        }
+    
+        // &__link {
+        //     display: flex;
+        //     margin-bottom: 10px;
+        //     font-size: 16px;
+        //     font-weight: 500;
+    
+        //     i {
+        //         font-size: 12px;
+        //         margin-right: 10px;
+        //     }
+    
+        //     .fa-handshake-angle {
+        //         font-size: 10px;
+        //     }
+        // }
+    
+    }
+
 }
