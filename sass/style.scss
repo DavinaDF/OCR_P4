@@ -606,23 +606,42 @@ h2 {
                 margin-right: 40px;
             }
         }
-    
-        // &__link {
-        //     display: flex;
-        //     margin-bottom: 10px;
-        //     font-size: 16px;
-        //     font-weight: 500;
-    
-        //     i {
-        //         font-size: 12px;
-        //         margin-right: 10px;
-        //     }
-    
-        //     .fa-handshake-angle {
-        //         font-size: 10px;
-        //     }
-        // }
-    
+    }
+
+    // Problème ici hauteur image
+    .img-restaurant {
+        height: 383px;
+
+        img {
+            height: unset;
+            height: 383;
+        }
+    }
+
+    .menu {
+        max-width: 1055px;
+        margin: auto;
+
+        &__restaurant {
+
+            //rapprocher h1 zt i
+            justify-content: center;
+            align-content: center;
+            gap: 50px;
+
+            &__icone {
+                i {
+                    right: 0px;
+                    top: 8px;
+                }
+                
+            }
+        }
+
+        &__category {
+            width: 634px;
+            margin: auto;
+        }
     }
 
 }

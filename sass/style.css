@@ -454,4 +454,28 @@ h2 {
   .footer__link__2 {
     margin-right: 40px;
   }
+  .img-restaurant {
+    height: 383px;
+  }
+  .img-restaurant img {
+    height: unset;
+    height: 383;
+  }
+  .menu {
+    max-width: 1055px;
+    margin: auto;
+  }
+  .menu__restaurant {
+    justify-content: center;
+    align-content: center;
+    gap: 50px;
+  }
+  .menu__restaurant__icone i {
+    right: 0px;
+    top: 8px;
+  }
+  .menu__category {
+    width: 634px;
+    margin: auto;
+  }
 }/*# sourceMappingURL=style.css.map */
