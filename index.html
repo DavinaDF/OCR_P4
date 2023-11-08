@@ -11,13 +11,11 @@
     <link rel="stylesheet" href="./sass/style.css">
 </head>
 <body>
-    <!-- <div class="loader">
-        <div class="dot"></div>
-        <div class="dot"></div>
-        <div class="dot"></div>
-        <div class="dot"></div>
-        <div class="dot"></div>
-      </div> -->
+    <div class="loader">
+        <div class="circle circle__1"></div>
+        <div class="circle circle__2"></div>
+        <div class="circle circle__3"></div>
+    </div>
     <header class="header">
         <img src="img/logo/ohmyfood.png" class="header__logo" alt="Logo OhMyFood">
     </header>
@@ -66,18 +64,19 @@
                                 <div class="card-restaurant__picture">
                                     <img src="img/restaurants/la-palette-du-gout.jpg" alt="Photo assiettes La palette du gout">
                                 </div>
-                                <div class="card-restaurant__flag">Nouveau</div>
+                                <div  class="card-restaurant__content">
+                                    <div>
+                                        <h3>La palettre du goût</h3>
+                                        <p>Ménilmontant</p>
+                                    </div>
+                                
+                                </div>
                             </a>
-                            <div  class="card-restaurant__content">
-                                <div>
-                                    <h3>La palettre du goût</h3>
-                                    <p>Ménilmontant</p>
-                                </div>
-                                <div  class="card-restaurant__icone added-fav">
-                                    <i class="fa-regular fa-heart"></i>
-                                    <i class="fa-solid fa-heart"></i>
-                                </div>
-                            </div>
+                            <div class="card-restaurant__flag">Nouveau</div>
+                            <button  class="card-restaurant__icone">
+                                <i class="fa-regular fa-heart"></i>
+                                <i class="fa-solid fa-heart"></i>
+                            </button>
                         </article>
                                         
                         <a href="/restaurants/la-note-enchantee.html">

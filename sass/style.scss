@@ -9,6 +9,32 @@ $back-grey: #EAEAEA;
 $grey-light: #F6F6F6;
 $gradient-background: linear-gradient(to bottom, #FF79DA 0%, #9356DC 100%);
 
+//Keyframes
+@keyframes loader-start {
+    0% {
+        transform: scale(1,1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(2,2);
+        opacity: 0.3;
+    }
+    100% {
+        transform: scale(1,1);
+        opacity: 1;
+    }
+}
+
+@keyframes loader-end {
+    0% {
+        opacity: 1;
+      }
+      100% {
+        opacity: 0;
+        z-index: -1000;
+      }
+}
+
 // Mobile first
 
 body {
@@ -16,103 +42,41 @@ body {
     scroll-behavior: smooth;
 }
 
+// Ronds à animer 
 .loader {
+    // margin-top: 200px;
+    z-index: 100;
     position: absolute;
     width: 100%;
     height: 100%;
-    background-color: #fff;
-    top: 50%;
-    left: 40%;
-    margin-left: 10%;
-    transform: translate3d(-50%, -50%, 0);
+    background-color: #999999;
     display: flex;
+    flex: 1;
     justify-content: center;
     align-items: center;
-    animation: fadeOut 1s;
-  }
-  .dot {
-    width: 24px;
-    height: 24px;
-    border-radius: 100%;
-    display: inline-block;
-    animation: slide 1s infinite;
-  }
-  .dot:nth-child(1) {
-    animation-delay: 0.1s;
-    background: $primary-color;
-  }
-  .dot:nth-child(2) {
-    animation-delay: 0.2s;
-    background: $secondary-color;
-  }
-  .dot:nth-child(3) {
-    animation-delay: 0.3s;
-    background: $tertiary-color;
-  }
-  .dot:nth-child(4) {
-    animation-delay: 0.4s;
-    background: $grey-light;
-  }
-  .dot:nth-child(5) {
-    animation-delay: 0.5s;
-    background: $back-grey;
-  }
-  @-moz-keyframes slide {
-    0% {
-      transform: scale(1);
+    animation: loader-end 4s ease 0.5s forwards;
+}
+
+.circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+    animation: loader-start ease-in-out 2s 2;
+
+    &__1 {
+        animation-delay: 0.2s;
+        background-color: $primary-color;
+        // animation: circle-1 3s;
     }
-    50% {
-      opacity: 0.3;
-      transform: scale(2);
+    &__2 {
+        animation-delay: 0.6s;
+        background-color: $secondary-color;
+        // animation: circle-1 3s none 0.4s;
     }
-    100% {
-      transform: scale(1);
-    }
-  }
-  @-webkit-keyframes slide {
-    0% {
-      transform: scale(1);
-    }
-    50% {
-      opacity: 0.3;
-      transform: scale(2);
-    }
-    100% {
-      transform: scale(1);
-    }
-  }
-  @-o-keyframes slide {
-    0% {
-      transform: scale(1);
-    }
-    50% {
-      opacity: 0.3;
-      transform: scale(2);
-    }
-    100% {
-      transform: scale(1);
-    }
-  }
-  @keyframes slide {
-    0% {
-      transform: scale(1);
-    }
-    50% {
-      opacity: 0.3;
-      transform: scale(2);
-    }
-    100% {
-      transform: scale(1);
-    }
-  }
-  @keyframes fadeOut {
-    0% {
-      opacity: 1;
-    }
-    100% {
-      opacity: 0;
-      z-index: -100;
-    //   display: none;
+    &__3 {
+        animation-delay: 1s;
+        background-color: $tertiary-color;
+        // animation: circle-1 3s none 0.8s;
     }
 }
 
@@ -341,7 +305,7 @@ h2 {
                 position: absolute;
                 right: 20px;
                 bottom: 40px;
-                color: #000;
+                // color: #000;
                 font-size: 22px;
                 pointer-events: initial;
             }
@@ -354,25 +318,21 @@ h2 {
                 // right: 20px;
                 // bottom: 40px;
                 opacity: 0;
-        
-                &:hover {
-                    opacity: 1;
-                    color: transparent;
-                    background-clip: text;
-                    -webkit-background-clip: text;
-                    transition: all 0.4s ease-in-out;
-                    background-image: $gradient-background;
-                }
 
                 // Essai coeur rempli au clic
-                &:active {
-                    opacity: 1;
-                    color: transparent;
-                    background-clip: text;
-                    -webkit-background-clip: text;
-                    transition: all 0.4s ease-in-out;
-                    background-image: $gradient-background;
-                }
+            }
+
+            &:active .fa-solid, &:focus .fa-solid {
+                opacity: 1;
+                color: transparent;
+                background-clip: text;
+                -webkit-background-clip: text;
+                transition: all 0.4s infinite;
+                background-image: $gradient-background;
+            }
+
+            &:active .fa-regular, &:focus .fa-regular {
+                opacity: 0;
             }
         }
     }
@@ -585,6 +545,46 @@ h2 {
         .grid2, .grid4 {
             margin-left: 50px;
         }
+
+        &__content {
+
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+
+            h3 {
+                color: #000;
+                font-size: 18px;
+                font-weight: 700;
+            }
+            p{
+                color: #000;
+                font-size: 17px;
+                font-weight: 300;
+            }
+            
+        }
+
+        &__icone {
+            position: absolute;
+            top: 225px;
+            right: 45px;
+            }
+            i {
+            position: absolute;
+            font-size: 1.3rem;
+            }
+            .fa-solid {
+            opacity: 0;
+            color: transparent;
+            background-clip: text;
+            -webkit-background-clip: text;
+            transition: all 0.4s ease-in-out;
+            background-image: $gradient-background;
+            &:hover {
+                opacity: 1;
+            }
+        }
     }
 
     .footer {
@@ -609,18 +609,31 @@ h2 {
     }
 
     // Problème ici hauteur image
-    .img-restaurant {
-        height: 383px;
 
+    // .img-restaurant {
+    //     height: 383px;
+
+    //     img {
+    //         height: unset;
+    //         height: 383;
+    //         object-fit: cover;
+    //     }
+    // }
+
+    .img-restaurant {
+        height: 350px;
+        width: 100%;
         img {
-            height: unset;
-            height: 383;
+          width: 100%;
+          height: 350px;
+          object-fit: cover;
         }
-    }
+      }
 
     .menu {
         max-width: 1055px;
         margin: auto;
+        margin-top: -50px;
 
         &__restaurant {
 
@@ -643,5 +656,4 @@ h2 {
             margin: auto;
         }
     }
-
 }
