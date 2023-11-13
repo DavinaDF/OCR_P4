@@ -54,6 +54,7 @@ body {
 button {
     border: none;
     background-color: transparent;
+    cursor: pointer;
 }
 
 // Ronds à animer 
@@ -440,7 +441,6 @@ h2 {
 
     &__category {
 
-        margin-top: 40px;
         padding: 20px;
 
         &:nth-child(1) {
@@ -481,6 +481,7 @@ h2 {
             justify-content: flex-start;
             align-items: flex-end;
             width: 100%;
+            cursor: pointer;
             
             &__name {
 

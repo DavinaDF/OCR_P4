@@ -38,6 +38,7 @@ body {
 button {
   border: none;
   background-color: transparent;
+  cursor: pointer;
 }
 
 .loader {
@@ -368,7 +369,6 @@ h2 {
   background-image: linear-gradient(to bottom, #FF79DA 0%, #9356DC 100%);
 }
 .menu__category {
-  margin-top: 40px;
   padding: 20px;
 }
 .menu__category:nth-child(1) {
@@ -404,6 +404,7 @@ h2 {
   justify-content: flex-start;
   align-items: flex-end;
   width: 100%;
+  cursor: pointer;
 }
 .menu__category__card__name {
   margin-right: auto;
