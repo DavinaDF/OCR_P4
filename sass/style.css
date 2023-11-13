@@ -349,6 +349,7 @@ h2 {
   font-size: 22px;
 }
 .menu__restaurant__icone {
+  cursor: pointer;
   position: relative;
 }
 .menu__restaurant__icone i {
