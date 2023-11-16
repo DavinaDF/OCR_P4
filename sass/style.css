@@ -288,7 +288,7 @@ h2 {
   color: transparent;
   background-clip: text;
   -webkit-background-clip: text;
-  transition: all 0.4s infinite;
+  transition: all 0.4s;
   background-image: linear-gradient(to bottom, #FF79DA 0%, #9356DC 100%);
 }
 .button_fav:active .fa-regular, .button_fav:focus .fa-regular {
@@ -301,7 +301,7 @@ h2 {
     color: transparent;
     background-clip: text;
     -webkit-background-clip: text;
-    transition: all 0.4s infinite;
+    transition: all 0.4s;
     background-image: linear-gradient(to bottom, #FF79DA 0%, #9356DC 100%);
   }
 }
@@ -430,7 +430,7 @@ h2 {
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
-  font-size: 18;
+  font-size: 18px;
   font-weight: 500;
   padding: 10px 0 5px 15px;
 }

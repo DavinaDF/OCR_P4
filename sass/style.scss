@@ -343,7 +343,7 @@ h2 {
         color: transparent;
         background-clip: text;
         -webkit-background-clip: text;
-        transition: all 0.4s infinite;
+        transition: all 0.4s;
         background-image: $gradient-background;
     }
 
@@ -358,7 +358,7 @@ h2 {
         color: transparent;
         background-clip: text;
         -webkit-background-clip: text;
-        transition: all 0.4s infinite;
+        transition: all 0.4s;
         background-image: $gradient-background;
     }
 }
@@ -504,7 +504,7 @@ h2 {
                     white-space: nowrap;
                     text-overflow: ellipsis;
                     overflow: hidden;
-                    font-size: 18;
+                    font-size: 18px;
                     font-weight: 500;
                     padding: 10px 0 5px 15px;
                 }
