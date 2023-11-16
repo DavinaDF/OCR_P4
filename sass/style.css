@@ -111,6 +111,9 @@ h2 {
   .gradient-btn {
     font-size: 12px;
   }
+  .menu__restaurant h1 {
+    font-size: 20px;
+  }
 }
 .header {
   z-index: 1;
@@ -253,9 +256,10 @@ h2 {
   right: 20px;
 }
 .ListRestaurant .card-restaurant__content {
-  padding: 20px;
+  padding: 10px 0 0 20px;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: space-around;
 }
 .ListRestaurant .card-restaurant__content h3 {
   color: #000;
@@ -263,21 +267,23 @@ h2 {
   font-weight: 700;
 }
 .ListRestaurant .card-restaurant__content p {
+  padding-top: 5px;
   color: #000;
   font-size: 17px;
   font-weight: 300;
 }
-.ListRestaurant .card-restaurant__icone i {
+.ListRestaurant .card-restaurant i {
   position: absolute;
   right: 20px;
   bottom: 40px;
   font-size: 22px;
   pointer-events: initial;
 }
-.ListRestaurant .card-restaurant__icone .fa-solid {
+
+.button_fav .fa-solid {
   opacity: 0;
 }
-.ListRestaurant .card-restaurant__icone:active .fa-solid, .ListRestaurant .card-restaurant__icone:focus .fa-solid {
+.button_fav:active .fa-solid, .button_fav:focus .fa-solid {
   opacity: 1;
   color: transparent;
   background-clip: text;
@@ -285,10 +291,20 @@ h2 {
   transition: all 0.4s infinite;
   background-image: linear-gradient(to bottom, #FF79DA 0%, #9356DC 100%);
 }
-.ListRestaurant .card-restaurant__icone:active .fa-regular, .ListRestaurant .card-restaurant__icone:focus .fa-regular {
+.button_fav:active .fa-regular, .button_fav:focus .fa-regular {
   opacity: 0;
 }
 
+@media screen and (min-width: 1024px) {
+  .button_fav:hover .fa-solid {
+    opacity: 1;
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    transition: all 0.4s infinite;
+    background-image: linear-gradient(to bottom, #FF79DA 0%, #9356DC 100%);
+  }
+}
 .footer {
   padding: 20px;
   background-color: #353535;
@@ -344,31 +360,26 @@ h2 {
 }
 .menu__restaurant h1 {
   font-family: "Shrikhand", sans-serif;
-  font-size: 28px;
+  font-size: 24px;
+}
+@media screen and (min-width: 350px) {
+  .menu__restaurant h1 {
+    font-size: 28px;
+  }
 }
 .menu__restaurant i {
   font-size: 22px;
 }
-.menu__restaurant__icone {
+.menu__restaurant button {
   cursor: pointer;
   position: relative;
 }
-.menu__restaurant__icone i {
+.menu__restaurant button i {
   position: absolute;
   right: 20px;
+  top: 10px;
   color: #000;
   font-size: 22px;
-}
-.menu__restaurant__icone .fa-solid {
-  opacity: 0;
-}
-.menu__restaurant__icone .fa-solid:hover {
-  opacity: 1;
-  color: transparent;
-  background-clip: text;
-  -webkit-background-clip: text;
-  transition: all 0.4s ease-in-out;
-  background-image: linear-gradient(to bottom, #FF79DA 0%, #9356DC 100%);
 }
 .menu__category {
   padding: 20px;
@@ -440,6 +451,7 @@ h2 {
   font-weight: 700;
   padding: 5px 10px 10px 0;
   transform: translateX(60px);
+  transition: transform 0.6s cubic-bezier(0.33, 1, 0.68, 1);
 }
 .menu__category__card span {
   opacity: 0;
@@ -452,6 +464,7 @@ h2 {
   background-color: #99E2D0;
   color: #fff;
   transform: translateX(60px);
+  transition: transform 0.6s cubic-bezier(0.33, 1, 0.68, 1);
 }
 .menu .menu__category__card:hover > .menu__category__card__price {
   transform: translateX(0px);
