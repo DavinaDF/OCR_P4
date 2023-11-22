@@ -341,10 +341,10 @@ h2 {
     &:active .fa-solid, &:focus .fa-solid {
         opacity: 1;
         color: transparent;
+        background-image: $gradient-background;
         background-clip: text;
         -webkit-background-clip: text;
-        transition: all 0.4s;
-        background-image: $gradient-background;
+        transition: all 0.6s ease;
     }
 
     &:active .fa-regular, &:focus .fa-regular {
@@ -356,10 +356,14 @@ h2 {
     .button_fav:hover .fa-solid {
         opacity: 1;
         color: transparent;
+        background-image: $gradient-background;
         background-clip: text;
         -webkit-background-clip: text;
-        transition: all 0.4s;
-        background-image: $gradient-background;
+        transition: all 0.6s ease;
+    }
+
+    .button_fav:hover .fa-regular {
+        opacity: 0;
     }
 }
 
@@ -525,7 +529,7 @@ h2 {
                 align-items: center;
                 font-size: 15px;
                 font-weight: 700;
-                padding: 5px 10px 10px 0;
+                padding: 5px 5px 10px 0;
                 transform: translateX(71px);
                 transition: transform 0.6s cubic-bezier(0.33, 1, 0.68, 1);
             }
@@ -550,7 +554,6 @@ h2 {
         transition: transform 0.6s cubic-bezier(0.33, 1, 0.68, 1);
     }
     .menu__category__card:hover > .icon {
-        // opacity: 1;
         transform: translateX(0px);
         transition: transform 0.6s cubic-bezier(0.33, 1, 0.68, 1);
     }
